@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>个人评分页面</title>
+</head>
+<body>
+<h1 th:text="${movieIds}">default</h1>
+<h1>热烈欢迎用户: <span th:if="${user!=null}" th:text="${user.username}"></span>, 请您为以下电影打分:</h1>
+
+<form th:action="@{/submituserscore}" method="post">
+    <input type="text" style="visibility: hidden; width: 0px; height: 0px;" name="userid" th:if="${user!=null}" th:value="${user.userid}" />
+
+    <table>
+        <tr th:each="movieid : ${movieIds}">
+            <td>
+                <input type="text" style="visibility: hidden; width: 0px; height: 0px;" name="movieid" th:value="${movieid}" />
+                <br />
+                <label th:text="${movieid}"></label>
+                <!-- Add an additional input field for movieids -->
+                <input type="text" style="visibility: hidden; width: 0px; height: 0px;" name="movieids" th:value="${movieid}" />
+                <select name="moviescore">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>

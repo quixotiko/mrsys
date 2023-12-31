@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"></title>
+</head>
+<body>
+<h1>亲爱的用户: <span th:text="${userid}"></span>,猜你喜欢电影:</h1>
+
+<div th:text="${results}">
+    default text
+</div>
+</body>
+</html>

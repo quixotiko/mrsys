@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ALSModel:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ALSModel_jar</output-path>
+    <root id="archive" name="ALSModel.jar">
+      <element id="module-output" name="ALSModel" />
+    </root>
+  </artifact>
+</component>

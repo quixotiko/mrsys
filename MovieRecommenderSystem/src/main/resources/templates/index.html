@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div id="log">
+    <form th:action="@{/user/login}" method="post">
+        <h1>用户登录</h1>
+        <br/>
+        <span>帐号:</span>
+        <input type="text" name="username"/>
+        <br/>
+        <span>密码:</span>
+        <input type="password" name="password"/>
+        <br/>
+        <br/>
+        <input type="submit" value="登录"/>
+        <br/>
+        <a th:href="@{/hello}" title="主页">返回主页</a>
+    </form>
+    <form th:action="@{/user/register}" method="post">
+        <h1>用户注册</h1>
+        <br/>
+        <span>帐号:</span>
+        <input type="text" name="username"/>
+        <br/>
+        <span>密码:</span>
+        <input type="password" name="password"/>
+        <br/>
+        <br/>
+        <input type="submit" value="注册"/>
+        <a th:href="@{/hello}" title="主页">返回主页</a>
+    </form>
+</div>
+</body>
+</html>
